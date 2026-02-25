@@ -1,24 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iWa-hn-U3S">
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Welcome Screen" id="BYZ-38-t0r" customClass="ViewControllerWelcome" customModule="DustinLayAssign3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundCookie" translatesAutoresizingMaskIntoConstraints="NO" id="xS5-s9-Rcx">
+                                <rect key="frame" x="0.0" y="245" width="402" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="0bn-g7-n1Y"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSV-lr-mGc">
+                                <rect key="frame" x="20" y="445" width="362" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="B8f-rI-18i"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="🍪 Choc. Chip Cookies 🍪">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cookieManual:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R28-uF-CdN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf5-8c-EIx">
+                                <rect key="frame" x="20" y="615" width="362" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="vly-ka-u42"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="🎂 Chocolate Cake 🎂">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cakeProgram:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBv-yU-gOF"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kci-0P-Oee">
+                                <rect key="frame" x="0.0" y="704" width="402" height="170"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekj-VX-P7s">
+                                        <rect key="frame" x="0.0" y="0.0" width="402" height="75"/>
+                                        <color key="backgroundColor" red="0.62704661399999995" green="1" blue="0.61503976159999996" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="OKC-Nd-ld1"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="⭐️ Leave a Review ⭐️" cornerStyle="fixed">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="jcN-YJ-jqW" kind="show" id="J2u-FE-EVD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Rating: -/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIY-AA-KlZ">
+                                        <rect key="frame" x="0.0" y="75" width="402" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="sdu-gD-vMb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstItem="vIY-AA-KlZ" firstAttribute="top" secondItem="Ekj-VX-P7s" secondAttribute="bottom" id="6Dc-8w-ds7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ekj-VX-P7s" secondAttribute="trailing" id="A0y-Xa-AEJ"/>
+                                    <constraint firstItem="Ekj-VX-P7s" firstAttribute="leading" secondItem="Kci-0P-Oee" secondAttribute="leading" id="Ew3-25-cqR"/>
+                                    <constraint firstAttribute="trailing" secondItem="vIY-AA-KlZ" secondAttribute="trailing" id="mUX-9f-ZFZ"/>
+                                    <constraint firstAttribute="height" constant="170" id="q7b-I8-beA"/>
+                                    <constraint firstItem="Ekj-VX-P7s" firstAttribute="top" secondItem="Kci-0P-Oee" secondAttribute="top" id="w5n-2a-d32"/>
+                                    <constraint firstItem="vIY-AA-KlZ" firstAttribute="leading" secondItem="Kci-0P-Oee" secondAttribute="leading" id="x63-nj-fkQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5E-Wr-ivE">
+                                <rect key="frame" x="20" y="529" width="362" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="lga-w0-YTu"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="🥧 Apple Pie 🥧">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pieManual:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kzE-E3-rFe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.83125325883786705" green="0.38218088198310635" blue="0.37204295770515833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xS5-s9-Rcx" secondAttribute="trailing" id="4Ng-L2-ktw"/>
+                            <constraint firstItem="cf5-8c-EIx" firstAttribute="top" secondItem="k5E-Wr-ivE" secondAttribute="bottom" constant="20" id="5On-05-3af"/>
+                            <constraint firstItem="k5E-Wr-ivE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7sU-LS-kbs"/>
+                            <constraint firstItem="Kci-0P-Oee" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D8m-6M-pWO"/>
+                            <constraint firstItem="xS5-s9-Rcx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fxt-Nm-6IO"/>
+                            <constraint firstItem="cf5-8c-EIx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JOt-b3-xY7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZSV-lr-mGc" secondAttribute="trailing" constant="20" id="Kde-sx-30h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cf5-8c-EIx" secondAttribute="trailing" constant="20" id="ML8-qC-LaJ"/>
+                            <constraint firstItem="k5E-Wr-ivE" firstAttribute="top" secondItem="ZSV-lr-mGc" secondAttribute="bottom" constant="20" id="fTw-K0-SYJ"/>
+                            <constraint firstItem="ZSV-lr-mGc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gdr-fQ-42z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k5E-Wr-ivE" secondAttribute="trailing" constant="20" id="jOd-js-Ea5"/>
+                            <constraint firstItem="ZSV-lr-mGc" firstAttribute="top" secondItem="xS5-s9-Rcx" secondAttribute="bottom" constant="30" id="kJv-oi-CR1"/>
+                            <constraint firstItem="xS5-s9-Rcx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="l0P-ol-D59"/>
+                            <constraint firstAttribute="bottom" secondItem="Kci-0P-Oee" secondAttribute="bottom" id="rBQ-1Q-hjS"/>
+                            <constraint firstItem="Kci-0P-Oee" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="suO-xv-aKf"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Recipe Book" largeTitleDisplayMode="always" id="3bA-p9-9D1"/>
+                    <connections>
+                        <segue destination="MJo-q2-Xuz" kind="show" identifier="cookieSegue" id="9Cf-NM-Nsh"/>
+                        <segue destination="MJo-q2-Xuz" kind="show" identifier="pieSegue" id="M84-f9-tHx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="753.73134328358208" y="84.439359267734545"/>
+        </scene>
+        <!--RecipesVC-->
+        <scene sceneID="hz4-Bb-Cad">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerRecipes" title="RecipesVC" id="MJo-q2-Xuz" customClass="ViewControllerRecipes" customModule="DustinLayAssign3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kXE-4g-u0g">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ahG-HL-mYc">
+                                <rect key="frame" x="0.0" y="230" width="402" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Oky-oj-m2G"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJ9-Xs-iJb">
+                                <rect key="frame" x="0.0" y="538" width="402" height="290"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="yMl-YP-LP6"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="80" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cFL-2w-1NX">
+                                <rect key="frame" x="5" y="538" width="392" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="AVi-Rb-nqC"/>
+                                </constraints>
+                                <string key="text">2 and 1/4 cups (281g) all-purpose flour (spooned &amp; leveled)
+
+1 teaspoon baking soda
+
+1 and 1/2 teaspoons cornstarch*
+
+1/2 teaspoon salt
+3/4 cup (170g/12 Tbsp) unsalted butter, melted &amp; cooled for 5 minutes
+3/4 cup (150g) packed light or dark brown sugar
+1/2 cup (100g) granulated sugar
+1 large egg + 1 egg yolk, at room temperature
+2 teaspoons pure vanilla extract
+1 and 1/4 cups (225g) semi-sweet chocolate chips or chocolate chunks
+AHHHHHHHHHHH</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7kC-gL-c81"/>
+                        <color key="backgroundColor" red="0.83125325880000001" green="0.382180882" blue="0.37204295770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="7kC-gL-c81" firstAttribute="trailing" secondItem="ahG-HL-mYc" secondAttribute="trailing" id="7uD-nA-fH8"/>
+                            <constraint firstItem="cFL-2w-1NX" firstAttribute="top" secondItem="ahG-HL-mYc" secondAttribute="bottom" constant="8" symbolic="YES" id="BIe-AD-DBb"/>
+                            <constraint firstItem="cFL-2w-1NX" firstAttribute="leading" secondItem="7kC-gL-c81" secondAttribute="leading" constant="5" id="D6b-G3-yLw"/>
+                            <constraint firstItem="aJ9-Xs-iJb" firstAttribute="top" secondItem="ahG-HL-mYc" secondAttribute="bottom" constant="8" symbolic="YES" id="QiT-kG-wKO"/>
+                            <constraint firstItem="ahG-HL-mYc" firstAttribute="top" secondItem="7kC-gL-c81" secondAttribute="top" id="ScS-GS-tgO"/>
+                            <constraint firstItem="aJ9-Xs-iJb" firstAttribute="leading" secondItem="7kC-gL-c81" secondAttribute="leading" id="chi-ST-tAs"/>
+                            <constraint firstItem="7kC-gL-c81" firstAttribute="trailing" secondItem="aJ9-Xs-iJb" secondAttribute="trailing" id="hxg-SA-HHW"/>
+                            <constraint firstItem="7kC-gL-c81" firstAttribute="trailing" secondItem="cFL-2w-1NX" secondAttribute="trailing" constant="5" id="sDg-VQ-hDK"/>
+                            <constraint firstItem="ahG-HL-mYc" firstAttribute="leading" secondItem="7kC-gL-c81" secondAttribute="leading" id="zeF-Zs-gt0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="VOk-DY-Xya"/>
+                    <connections>
+                        <outlet property="clarityView" destination="aJ9-Xs-iJb" id="tem-aQ-BwK"/>
+                        <outlet property="descLabel" destination="cFL-2w-1NX" id="Df9-MK-L9B"/>
+                        <outlet property="foodImage" destination="ahG-HL-mYc" id="CWJ-I6-xF9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omz-vy-mnd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653" y="-206"/>
+        </scene>
+        <!--ReviewVC-->
+        <scene sceneID="EX9-mF-pfS">
+            <objects>
+                <viewController title="ReviewVC" id="jcN-YJ-jqW" customClass="ViewControllerReview" customModule="DustinLayAssign3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oyd-Pt-ic1">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="k1k-CP-rZ1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rate Your Recipes" id="8J9-Ch-B0W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2Y-0m-0rn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653" y="442"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dpT-zU-eaI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iWa-hn-U3S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mln-nb-pGh">
+                        <rect key="frame" x="0.0" y="124" width="402" height="106"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="71P-Pc-JXM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09g-VI-5QQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41.984732824427482" y="84.507042253521135"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="M84-f9-tHx"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="backgroundCookie" width="400" height="207"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

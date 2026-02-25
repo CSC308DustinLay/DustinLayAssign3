@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  DustinLayAssign3
 //
@@ -7,7 +6,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewControllerReview: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
