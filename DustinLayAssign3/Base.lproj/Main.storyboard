@@ -144,24 +144,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ahG-HL-mYc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cookieImage" translatesAutoresizingMaskIntoConstraints="NO" id="ahG-HL-mYc">
                                 <rect key="frame" x="0.0" y="230" width="402" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Oky-oj-m2G"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJ9-Xs-iJb">
-                                <rect key="frame" x="0.0" y="538" width="402" height="290"/>
+                                <rect key="frame" x="0.0" y="538" width="402" height="336"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="290" id="yMl-YP-LP6"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="80" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cFL-2w-1NX">
-                                <rect key="frame" x="5" y="538" width="392" height="290"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="290" id="AVi-Rb-nqC"/>
-                                </constraints>
+                                <rect key="frame" x="5" y="538" width="392" height="321"/>
                                 <string key="text">2 and 1/4 cups (281g) all-purpose flour (spooned &amp; leveled)
 
 1 teaspoon baking soda
@@ -187,10 +181,12 @@ AHHHHHHHHHHH</string>
                             <constraint firstItem="7kC-gL-c81" firstAttribute="trailing" secondItem="ahG-HL-mYc" secondAttribute="trailing" id="7uD-nA-fH8"/>
                             <constraint firstItem="cFL-2w-1NX" firstAttribute="top" secondItem="ahG-HL-mYc" secondAttribute="bottom" constant="8" symbolic="YES" id="BIe-AD-DBb"/>
                             <constraint firstItem="cFL-2w-1NX" firstAttribute="leading" secondItem="7kC-gL-c81" secondAttribute="leading" constant="5" id="D6b-G3-yLw"/>
+                            <constraint firstAttribute="bottom" secondItem="cFL-2w-1NX" secondAttribute="bottom" constant="15" id="J0k-YW-RAW"/>
                             <constraint firstItem="aJ9-Xs-iJb" firstAttribute="top" secondItem="ahG-HL-mYc" secondAttribute="bottom" constant="8" symbolic="YES" id="QiT-kG-wKO"/>
                             <constraint firstItem="ahG-HL-mYc" firstAttribute="top" secondItem="7kC-gL-c81" secondAttribute="top" id="ScS-GS-tgO"/>
                             <constraint firstItem="aJ9-Xs-iJb" firstAttribute="leading" secondItem="7kC-gL-c81" secondAttribute="leading" id="chi-ST-tAs"/>
                             <constraint firstItem="7kC-gL-c81" firstAttribute="trailing" secondItem="aJ9-Xs-iJb" secondAttribute="trailing" id="hxg-SA-HHW"/>
+                            <constraint firstAttribute="bottom" secondItem="aJ9-Xs-iJb" secondAttribute="bottom" id="nIE-5S-nJZ"/>
                             <constraint firstItem="7kC-gL-c81" firstAttribute="trailing" secondItem="cFL-2w-1NX" secondAttribute="trailing" constant="5" id="sDg-VQ-hDK"/>
                             <constraint firstItem="ahG-HL-mYc" firstAttribute="leading" secondItem="7kC-gL-c81" secondAttribute="leading" id="zeF-Zs-gt0"/>
                         </constraints>
@@ -249,6 +245,7 @@ AHHHHHHHHHHH</string>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backgroundCookie" width="400" height="207"/>
+        <image name="cookieImage" width="360" height="360"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
